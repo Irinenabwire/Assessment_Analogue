@@ -204,3 +204,6 @@ section .container.active .signupBox .imgBox {
 .list-group list-group-flush{
   margin-top: 100px;
 }
+.container{
+  background: lightgrey;
+}
