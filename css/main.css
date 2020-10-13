@@ -200,6 +200,7 @@ section .container.active .signupBox .imgBox {
     width: 100%;
   }
 }
-.dropdown{
-  padding-top: 100px;
+
+.list-group list-group-flush{
+  margin-top: 100px;
 }
