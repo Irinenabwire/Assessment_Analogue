@@ -3,6 +3,95 @@
   * Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
+
+$(".hBack").on("click", function(e){
+    e.preventDefault();
+    window.history.back();
+});
+$(document).ready(function() {
+  function tipCalculator() {
+    //retrieve and store variables
+    var amount = $("#amount").val();
+    var percentage = $("#percentage").val();
+    //calculate tip
+    var tip = amount * (percentage / 100);
+    
+    //convert to number
+    var total = +amount + tip;
+    
+    $("#tip").text(tip.toFixed(2));
+    $("#total").text(total.toFixed(2));
+  }; 
+  
+    $("#calculate").click(tipCalculator);
+});
+const form = document.querySelector("form");
+const dialog = document.querySelector(".dialog");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let nameValue = form.name.value;
+    let phoneValue = form.phone.value;
+    let emailValue = form.email.value;
+    let isEmpty = (nameValue || phoneValue || emailValue) === '';
+
+    if (!isEmpty) {
+        validateName(nameValue);
+        validatePhone(phoneValue);
+        validdateMail(emailValue);
+
+        if (validateName(nameValue) && validatePhone(phoneValue) && validdateMail(emailValue))
+            location.href = "./welcome.html";
+    } else {
+
+        dialog.style.display = "block";
+    }
+
+});
+
+
+//name validator
+function validateName(name) {
+    if (/^[a-zA-Z\-]+$/.test(name)) {
+        displayError("#name_error", "none");
+        return true;
+    } else {
+        displayError("#name_error", "block");
+        return false;
+    }
+}
+
+//phone number validator
+function validatePhone(phone) {
+    if (/^\d{10}$/.test(phone)) {
+        displayError("#phone_error", "none");
+        return true;
+    } else {
+
+        displayError("#phone_error", "block");
+        return false;
+    }
+}
+
+//email  validator
+function validdateMail(mail) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+        displayError("#email_error", "none");
+        return true;
+    } else {
+
+        displayError("#email_error", "block");
+        return false;
+    }
+}
+
+
+function displayError(elementId, elementProperty) {
+    return form.querySelector(elementId).style.display = elementProperty;
+}
+
+
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery'), require('popper.js')) :
   typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :

@@ -205,5 +205,190 @@ section .container.active .signupBox .imgBox {
   margin-top: 100px;
 }
 .container{
-  background: lightgrey;
+  background: #fff;
 }
+body {
+  font-family: 'Bubbler One', sans-serif !important;
+}
+
+nav {
+  margin-top: 2em;
+}
+
+nav a {
+  text-transform: uppercase;
+  font-size: 2em;
+  padding: .5em;
+}
+
+nav a:hover {
+  text-decoration: none;
+  font-size: 2.5em;
+}
+
+.title {
+  color: #183666;
+  margin-bottom: 1em;
+  margin-top: .8em;
+}
+
+h4 {
+  display: inline;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+#amount, #percentage {
+  width: 5em;
+}
+
+#calculate {
+  margin-top: 1em;
+}
+.simple-btn button,
+.btn-size,
+.secondary-btn button{
+  margin:10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: sans-serif;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    background: linear-gradient(to right, #0018f780 50%, #ffffff 50%), url('https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80');
+    width: 40%;
+    height: 500px;
+    border-radius: 2px;
+    margin: auto;
+    margin-top: 150px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+}
+
+.user img {
+    width: 150px;
+    height: 150px;
+}
+
+.user {
+    margin: auto;
+    position: absolute;
+    top: 20%;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    background: #ffffff;
+    transform: translate(-50%, -100%);
+    left: 50%;
+}
+
+.input-field {
+    margin: 20px 0px;
+}
+
+input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #d3d3d3;
+    box-shadow: none;
+    color: #b39d9d;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+form {
+    margin: 90px 50px;
+    width: 100%;
+}
+
+.form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: -200px;
+}
+
+button {
+    background: blueviolet;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    margin-bottom: 50px;
+    border-radius: 2px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.left,
+.right {
+    width: 100%;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+span {
+    background: yellow;
+    padding: 5px;
+    line-height: 2;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.dialog {
+    transition: 0.2s all;
+    color: red;
+}
+
+@media(max-width: 768px) {
+    .left {
+        display: none;
+    }
+
+    .form-wrapper {
+        width: 200%;
+    }
+
+    form {
+        width: 50%;
+    }
+
+    .container {
+        width: 190%;
+        height: 160vh;
+        background: white;
+    }
+
+    .right {
+        width: 200%;
+        margin-top: 200px;
+    }
+    .form-check-input{
+      padding-top: 200px;
+    }
+
+
